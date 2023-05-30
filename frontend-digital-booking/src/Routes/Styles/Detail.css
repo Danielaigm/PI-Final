@@ -1,0 +1,211 @@
+.detail{
+  max-height: calc(100vh - (10vh + 10vh));
+
+  overflow-y: scroll; 
+}
+.share-like{
+    width: 100%;
+ 
+    padding: 20px 20px 20px 0px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: flex-start;
+  }
+
+.share-like img{
+    width: 30px;
+    padding-left: 15px;
+    height: auto;
+}
+
+.place{
+    width: 100%;
+    padding: 10px;
+    background-color: #dedede;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: flex-start;
+
+    font-weight: bold;
+}
+
+.place img{
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.tour-images{
+  margin-bottom: 25px;
+
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+
+  position: relative;
+
+}
+
+.main-photo {
+  grid-column: 1;
+}
+
+.sub-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+
+  position: relative;
+}
+
+.sub-photos img:last-child {
+  position: relative;
+  z-index: 0;
+}
+
+.tour-images img {
+  width: 100%;
+  height: 100%;
+}
+
+.ver-mas-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  padding: 4px 8px;
+  color: rgb(255, 255, 255); 
+
+  z-index: 1;
+  transition: color 0.3s; 
+}
+
+.ver-mas-btn:hover {
+  color: white; 
+  background-color: black; 
+  cursor: pointer;
+}
+ 
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+
+    padding-left: 30px;
+
+    position: relative;
+  }
+  
+.description-text {
+    padding-left: 30px;
+    padding-right: 25px;
+    font-size: 1em;
+
+    text-align:start;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+
+  .title {
+    position: relative;
+  }
+  
+  .title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 1.5px;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .atributes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+  }
+
+  .atribute{
+    padding: 20px;
+    font-size: 1em;
+
+    margin-left: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: flex-start;
+  }
+
+  .atribute img{
+    background-color: #e4e4e4;
+    padding: 10px;
+    width: 50px;
+    border-radius: 10px;
+    height: auto;
+
+    margin-right: 10px;
+   
+  }
+
+  .atribute span{
+    font-weight: bold;
+    margin-right: 10px;
+  }
+    .reservations{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+
+    padding: 30px 0px 30px 30px;
+
+    width: 100%;
+    height: 10.42%;
+      
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      
+    background-color: #dedede;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1em;
+  }
+  
+.description-text {
+    font-size: 0.7em;
+
+  }
+
+  .atribute{
+    padding: 10px;
+    font-size: 0.7em;
+
+    margin-left: 20px;
+  }
+
+  .atribute img{
+    padding: 10px;
+    width: 30px;
+
+    margin-right: 10px;
+   
+  }
+}
+

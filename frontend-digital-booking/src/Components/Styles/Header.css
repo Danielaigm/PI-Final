@@ -1,0 +1,114 @@
+.logo {
+  width: auto;
+  height: 9vh;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.componente-header {
+  width: 100%;
+  padding: 10px;
+  height: 10vh;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  position: fixed;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #fff;
+}
+
+.componente-logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.componente-logo > a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eslogan {
+  font-style: italic;
+  font-weight: 4em;
+  font-size: 1.2em;
+  line-height: 3em;
+  color: #263238;
+}
+
+.componente-cuenta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.icono-hamburguesa {
+  display: none;
+}
+
+.btn-cuenta {
+  height: 40px;
+  width: 206px;
+  left: 0px;
+  top: 0px;
+  line-height: 18.4px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  color: #263238;
+  border: 1px solid #263238;
+  font-weight: 4em;
+  font-size: 1em;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .eslogan {
+    display: none;
+  }
+
+  .btn-cuenta {
+    height: 40px;
+    width: 164px;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+}
+
+/*Mobile*/
+@media screen and (max-width: 414px) {
+  .eslogan {
+    display: none;
+  }
+
+  .componente-header {
+    padding: 10px;
+  }
+
+  .icono-hamburguesa {
+    border: none;
+    padding: 0;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000;
+  }
+
+  .btn-cuenta {
+    display: none;
+  }
+}
