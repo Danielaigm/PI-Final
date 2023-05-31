@@ -21,19 +21,16 @@ const SingUp = () => {
                 className="w-[80%]  flex flex-col items-center"
                 onSubmit={handleSubmit(onSubmit)}
             >
-                <div className="grid  grid-cols-2 items-center   text-center w-full gap-10">
+                <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-2   items-center   text-center w-full gap-10">
                     <div className="relative ">
                         <input
                             name="Nombre del producto"
                             placeholder=" "
-                            className="pt-4 pb-1  w-[80%] px-4 mt-0 bg-white text-black transition-all border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200 "
+                            className="inputsSinUp"
                             {...register("email", { required: true })}
                         />
 
-                        <label
-                            className="absolute left-20 top-0 transition-all text-black"
-                            htmlFor="email"
-                        >
+                        <label className="labelsUp" htmlFor="email">
                             Nombre Completo
                         </label>
                         {errors.email && (
@@ -46,14 +43,11 @@ const SingUp = () => {
                         <input
                             name="Nombre del producto"
                             placeholder=" "
-                            className="pt-4 pb-1  w-[80%] px-4 mt-0 bg-white text-black transition-all border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200 "
+                            className="inputsSinUp"
                             {...register("email", { required: true })}
                         />
 
-                        <label
-                            className="absolute left-20 top-0 transition-all text-black"
-                            htmlFor="email"
-                        >
+                        <label className="labelsUp" htmlFor="email">
                             Email
                         </label>
                         {errors.email && (
@@ -66,14 +60,11 @@ const SingUp = () => {
                         <input
                             name="Nombre del producto"
                             placeholder=" "
-                            className="pt-4 pb-1  w-[80%] px-4 mt-0 bg-white text-black transition-all border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200 "
+                            className="inputsSinUp  "
                             {...register("email", { required: true })}
                         />
 
-                        <label
-                            className="absolute left-20 top-0 transition-all text-black"
-                            htmlFor="email"
-                        >
+                        <label className="labelsUp" htmlFor="email">
                             Email
                         </label>
                         {errors.email && (
@@ -88,12 +79,10 @@ const SingUp = () => {
                             type="password"
                             name="password"
                             placeholder=" "
-                            className="pt-4 pb-1  w-[80%] px-4 mt-0 bg-white text-black transition-all border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200"
+                            className="inputsSinUp "
                             {...register("password", { required: true })}
                         />
-                        <label className="absolute left-20 top-1 transition-all text-black">
-                            Contraseña
-                        </label>
+                        <label className="labelsUp">Contraseña</label>
                         {errors.password && (
                             <p className="text-red-500">
                                 Este campo es requerido

@@ -110,8 +110,8 @@ const Form = () => {
                 className="w-[80%] h-[80%]  flex flex-col items-center"
                 onSubmit={handleSubmit(onSubmit)}
             >
-                <div className="grid  grid-cols-2 text-center flex-wrap justify-between w-full gap-10">
-                    <div className="relative">
+                <div className="grid grid-cols-1 sm:grid-cols-2    lg:grid-cols-2  text-center flex-wrap justify-between w-full gap-10">
+                    <div className="relative  ">
                         <input
                             name="Nombre del producto"
                             placeholder=" "
@@ -119,10 +119,7 @@ const Form = () => {
                             {...register("nameProduct", { required: true })}
                         />
 
-                        <label
-                            className="absolute left-20 top-1 transition-all text-black"
-                            htmlFor="nameProduct"
-                        >
+                        <label className="labelsAdmin" htmlFor="nameProduct">
                             Nombre del tour
                         </label>
                         {errors.nameProduct && (
@@ -150,7 +147,7 @@ const Form = () => {
                         </select>
                         <label
                             htmlFor="category"
-                            className="absolute left-20 top-8 transition-all text-black "
+                            className="absolute left-[14%] top-8 transition-all text-black "
                         >
                             Categoría
                         </label>
@@ -168,9 +165,7 @@ const Form = () => {
                             className="pt-4 pb-1  w-[80%] px-4 mt-0 bg-white text-black transition-all border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200"
                             {...register("duration", { required: true })}
                         />
-                        <label className="absolute left-20 top-1 transition-all text-black">
-                            Duración del tour
-                        </label>
+                        <label className="labelsAdmin">Duración del tour</label>
                         {errors.duration && (
                             <p className="text-red-500">
                                 Este campo es requerido
@@ -184,9 +179,7 @@ const Form = () => {
                             className="pt-4 pb-1  w-[80%] px-4 mt-0 bg-white text-black transition-all border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200"
                             {...register("turistGuide", { required: true })}
                         />
-                        <label className="absolute left-20 top-1 transition-all text-black">
-                            Guía Turístico
-                        </label>
+                        <label className="labelsAdmin">Guía Turístico</label>
                         {errors.turistGuide && (
                             <p className="text-red-500">
                                 Este campo es requerido
@@ -200,9 +193,7 @@ const Form = () => {
                             className="pt-4 pb-1  w-[80%] px-4 mt-0 bg-white text-black transition-all border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200"
                             {...register("price", { required: true })}
                         />
-                        <label className="absolute left-20 top-1 transition-all text-black">
-                            Precio del tour
-                        </label>
+                        <label className="labelsAdmin">Precio del tour</label>
                         {errors.price && (
                             <p className="text-red-500">
                                 Este campo es requerido
@@ -210,7 +201,7 @@ const Form = () => {
                         )}
                     </div>
                 </div>
-                <div className="grid mt-10  grid-cols-2 text-center flex-wrap justify-between w-full gap-10">
+                <div className="grid mt-10  grid-cols-1 lg:grid-cols-2 text-center flex-wrap justify-between w-full gap-10">
                     <div className="relative ">
                         <textarea
                             name="descriptionProduct"
@@ -220,7 +211,7 @@ const Form = () => {
                                 required: true,
                             })}
                         />
-                        <label className="absolute left-20 top-2 transition-all text-black">
+                        <label className="absolute left-[14%] top-2 transition-all text-black">
                             Descripción del tour
                         </label>
                         {errors.descriptionProduct && (

@@ -31,19 +31,16 @@ const SingIn = () => {
                 className="w-[80%]  flex flex-col items-center"
                 onSubmit={handleSubmit(onSubmit)}
             >
-                <div className="flex flex-col items-center   text-center w-full gap-10">
-                    <div className="relative w-[40%]">
+                <div className="flex flex-col items-center  w-[100%] md:w-[65%]  lg:w-[60%] text-center  gap-10">
+                    <div className="relative lg:w-[60%]  w-[80%] md:w-[60%] sm:w-[50%]  ">
                         <input
                             name="Nombre del producto"
                             placeholder=" "
-                            className="pt-4 pb-1  w-[80%] px-4 mt-0 bg-white text-black transition-all border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200 "
+                            className="inputsSingIn "
                             {...register("email", { required: true })}
                         />
 
-                        <label
-                            className="absolute left-20 top-0 transition-all text-black"
-                            htmlFor="email"
-                        >
+                        <label className="labels" htmlFor="email">
                             Email
                         </label>
                         {errors.email && (
@@ -53,17 +50,15 @@ const SingIn = () => {
                         )}
                     </div>
 
-                    <div className="relative w-[40%]">
+                    <div className="relative lg:w-[60%]  w-[80%] md:w-[60%] sm:w-[50%] ">
                         <input
                             type="password"
                             name="password"
                             placeholder=" "
-                            className="pt-4 pb-1  w-[80%] px-4 mt-0 bg-white text-black transition-all border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200"
+                            className="inputsSingIn"
                             {...register("password", { required: true })}
                         />
-                        <label className="absolute left-20 top-1 transition-all text-black">
-                            Contraseña
-                        </label>
+                        <label className="labels">Contraseña</label>
                         {errors.password && (
                             <p className="text-red-500">
                                 Este campo es requerido
